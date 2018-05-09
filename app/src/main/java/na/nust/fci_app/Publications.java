@@ -11,23 +11,22 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class Lecturers extends AppCompatActivity {
-    private WebView webview;
+public class Publications extends AppCompatActivity {
+private WebView webview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lecturers);
+        setContentView(R.layout.activity_publications);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        webview =(WebView)findViewById(R.id.webView);
 
+        webview =(WebView)findViewById(R.id.webView);
         webview.setWebViewClient(new WebViewClient());
         webview.getSettings().setJavaScriptEnabled(true);
         webview.getSettings().setDomStorageEnabled(true);
         webview.setOverScrollMode(WebView.OVER_SCROLL_NEVER);
-        webview.loadUrl("http://fci.nust.na/?q=list-all-staff");
-
+        webview.loadUrl("http://fci.nust.na/?q=publications");
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
